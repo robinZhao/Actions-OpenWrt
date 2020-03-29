@@ -25,7 +25,7 @@ on:
 env:
   #REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: master
+  REPO_BRANCH: v19.07.2
   CONFIG_FILE: .config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
