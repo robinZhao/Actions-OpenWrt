@@ -72,11 +72,19 @@ jobs:
         git clone --depth 1 https://github.com/robinZhao/Actions-OpenWrt.git overwrite
         \cp -rf overwrite/* openwrt/
 
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
+      
+    - name: install driverfeeds
+      run: |
+        cd openwrt
+        src-git mtk https://github.com/Nossiac/mtk-openwrt-feeds
+        scripts/feeds update -f mtk
+        scripts/feeds install -a -p mtk
 
     - name: Load custom configuration
       run: |
