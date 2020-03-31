@@ -82,7 +82,7 @@ jobs:
     - name: install driverfeeds
       run: |
         cd openwrt
-        git clone --depth 1 https://github.com/Nossiac/mtk-openwrt-feeds mtk
+        echo "src-git mtk https://github.com/Nossiac/mtk-openwrt-feeds.git" >> feeds.conf.default
         scripts/feeds update -f mtk
         scripts/feeds install -a -p mtk
 
