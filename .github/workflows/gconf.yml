@@ -7,7 +7,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
+name: gconf
 
 on:
   watch:
@@ -24,11 +24,11 @@ on:
  
 
 env:
-  #REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_URL:  https://github.com/lede-project/source
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  #REPO_URL:  https://github.com/lede-project/source
   #REPO_URL: https://github.com/openwrt/openwrt
-  #REPO_BRANCH: v19.07.2
-  REPO_BRANCH:  v17.01.7
+  REPO_BRANCH: v19.07.1
+  #REPO_BRANCH:  v17.01.7
   CONFIG_FILE: .config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
