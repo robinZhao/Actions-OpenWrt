@@ -11,7 +11,7 @@ name: Build OpenWrt
 
 on:
   watch:
-    types: [1started]
+    types: [started]
   #release:
   #  types: [published]
   #push:
@@ -86,9 +86,9 @@ jobs:
         ../$DIY_SH
         make defconfig
 
-    #- name: SSH connection to Actions
-    #  uses: P3TERX/debugger-action@master
-    #  if: env.SSH_ACTIONS == 'true'
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
+      if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
       id: package
