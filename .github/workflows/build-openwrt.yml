@@ -11,7 +11,7 @@ name: Build OpenWrt
 
 on:
   watch:
-    types: [started]
+    types: [1started]
   #release:
   #  types: [published]
   #push:
