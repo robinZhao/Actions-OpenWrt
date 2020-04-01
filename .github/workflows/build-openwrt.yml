@@ -11,7 +11,7 @@ name: Build OpenWrt
 
 on:
   watch:
-    #types: [started]
+    types: [started]
   #release:
   #  types: [published]
   #push:
@@ -29,7 +29,7 @@ env:
   #REPO_URL: https://github.com/openwrt/openwrt
   #REPO_BRANCH: v19.07.2
   REPO_BRANCH:  v17.01.7
-  CONFIG_FILE: .config
+  CONFIG_FILE: openwrt/mini_lede.config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
   SSH_ACTIONS: true
@@ -144,4 +144,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: config
-        path: .config
+        path: openwrt/.config
