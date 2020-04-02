@@ -10,10 +10,10 @@
 name: gconf
 
 on:
-  #watch:
-  #  types: [started]
-  release:
-    types: [published]
+  watch:
+    types: [started]
+  #release:
+    #types: [published]
   #push:
   #  branches:
   #    - master
