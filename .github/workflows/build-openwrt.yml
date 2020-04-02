@@ -29,7 +29,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: v19.07.1
   #REPO_BRANCH:  v17.01.7
-  CONFIG_FILE: openwrt/r3_wrt1.config
+  CONFIG_FILE: openwrt/mini_wrt.config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
   SSH_ACTIONS: true
@@ -73,7 +73,7 @@ jobs:
     - name: install driverfeeds
       run: |
         cd openwrt
-        echo "src-git mtk https://github.com/Nossiac/mtk-openwrt-feeds" >> feeds.conf.default
+        echo "src-git mtk https://github.com/Nossiac/mtk-openwrt-feeds;lede-17.01" >> feeds.conf.default
         scripts/feeds update -f mtk
         scripts/feeds install -a -p mtk
 
