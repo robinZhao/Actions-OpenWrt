@@ -25,10 +25,10 @@ on:
 
 env:
   #REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_URL:  https://github.com/lede-project/source
-  #REPO_URL: https://github.com/openwrt/openwrt
-  #REPO_BRANCH: v19.07.1
-  REPO_BRANCH: v17.01.4
+  #REPO_URL:  https://github.com/lede-project/source
+  REPO_URL: https://github.com/openwrt/openwrt
+  REPO_BRANCH: v19.07.3
+  #REPO_BRANCH: v17.01.4
   CONFIG_FILE: openwrt/mini_lede.config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
@@ -70,12 +70,12 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
       
-    - name: install driverfeeds
-      run: |
-        cd openwrt
-        echo "src-git mtk https://github.com/Nossiac/mtk-openwrt-feeds;lede-17.01" >> feeds.conf.default
-        scripts/feeds update -f mtk
-        scripts/feeds install -a -p mtk
+  #  - name: install driverfeeds
+  #    run: |
+  #      cd openwrt
+  #      echo "src-git mtk https://github.com/Nossiac/mtk-openwrt-feeds;lede-17.01" >> feeds.conf.default
+  #      scripts/feeds update -f mtk
+  #      scripts/feeds install -a -p mtk
 
     - name: Load custom configuration
       run: |
